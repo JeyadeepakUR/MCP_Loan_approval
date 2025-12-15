@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFSI Bank - Loan Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🏦 BFSI Bank</h1>
+                <p class="tagline">Personal Loan Application</p>
+            </div>
+            <div class="session-info" id="sessionInfo" style="display: none;">
+                <span class="session-badge" id="stageBadge">SALES</span>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-messages" id="chatMessages">
+                <div class="welcome-message">
+                    <div class="welcome-icon">💼</div>
+                    <h2>Welcome to BFSI Bank</h2>
+                    <p>Let's help you get the loan you need. Click "Start Application" to begin.</p>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="userInput" 
+                        placeholder="Type your message here..." 
+                        disabled
+                        autocomplete="off"
+                    >
+                    <button id="sendButton" disabled>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <button id="startButton" class="start-button">
+                    Start Application
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions" id="quickActions" style="display: none;">
+            <button class="quick-action" data-message="I need 5 lakhs for 3 years">
+                💰 5L for 3 years
+            </button>
+            <button class="quick-action" data-message="I need 10 lakhs for 5 years">
+                💰 10L for 5 years
+            </button>
+            <button class="quick-action" data-message="I need 15 lakhs for 4 years">
+                💰 15L for 4 years
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
