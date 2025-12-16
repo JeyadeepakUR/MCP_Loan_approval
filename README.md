@@ -293,7 +293,6 @@ python examples\happy_path.py
 
 **Documentation Files:**
 - `README.md` - This file
-- `walkthrough.md` - Implementation walkthrough (in `.gemini/antigravity/brain/`)
 
 **For Issues:**
 1. Check Flask/Python logs
